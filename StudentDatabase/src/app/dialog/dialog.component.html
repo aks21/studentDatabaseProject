@@ -1,0 +1,24 @@
+<h1 mat-dialog-title> Add Student Form</h1>
+<form [formGroup]="studentForm">
+    <div mat-dialog-content>
+        <mat-form-field appearance="outline">
+            <mat-label>Student name</mat-label>
+            <input matInput placeholder="Enter name" formControlName="studentName">
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline">
+            <mat-label>Student Age</mat-label>
+            <input matInput type="number" placeholder="Enter age" formControlName="studentAge">
+
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline">
+            <mat-label>Student marks</mat-label>
+            <input matInput placeholder="Enter marks" type="number" formControlName="studentMarks">
+          </mat-form-field>
+    <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary" style="margin-left:8px;" (click)="addStudent()">{{actionBtn}}</button>
+    </div>
+    </div>
+</form>
